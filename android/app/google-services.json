@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "445985023314",
+    "project_id": "get-a-lift-46790",
+    "storage_bucket": "get-a-lift-46790.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:445985023314:android:6ae94c2b16745b24bb868b",
+        "android_client_info": {
+          "package_name": "com.mycompany.getalift"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCAZWjHYKjdXE9XNH7M3cdb1DJCMd8dOHU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
