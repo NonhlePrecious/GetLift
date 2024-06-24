@@ -71,13 +71,13 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
       debugLogDiagnostics: true,
       refreshListenable: appStateNotifier,
       errorBuilder: (context, state) =>
-          appStateNotifier.loggedIn ? const LiftsWidget() : const SigninWidget(),
+          appStateNotifier.loggedIn ? const LiftsWidget() : const HomeWidget(),
       routes: [
         FFRoute(
           name: '_initialize',
           path: '/',
           builder: (context, _) =>
-              appStateNotifier.loggedIn ? const LiftsWidget() : const SigninWidget(),
+              appStateNotifier.loggedIn ? const LiftsWidget() : const HomeWidget(),
         ),
         FFRoute(
           name: 'password_reset',
@@ -122,6 +122,23 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: 'signin',
           path: '/signin',
           builder: (context, params) => const SigninWidget(),
+        ),
+        FFRoute(
+          name: 'searchlift',
+          path: '/searchlift',
+          builder: (context, params) => const SearchliftWidget(),
+        ),
+        FFRoute(
+          name: 'home',
+          path: '/home',
+          builder: (context, params) => HomeWidget(
+            liftDocRef: params.getParam(
+              'liftDocRef',
+              ParamType.DocumentReference,
+              isList: false,
+              collectionNamePath: ['lifts'],
+            ),
+          ),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );
@@ -292,7 +309,7 @@ class FFRoute {
 
           if (requireAuth && !appStateNotifier.loggedIn) {
             appStateNotifier.setRedirectLocationIfUnset(state.uri.toString());
-            return '/signin';
+            return '/home';
           }
           return null;
         },

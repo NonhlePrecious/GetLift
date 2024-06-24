@@ -5,3 +5,5 @@ export '/create_lift/create_lift_widget.dart' show CreateLiftWidget;
 export '/lift_details/lift_details_widget.dart' show LiftDetailsWidget;
 export '/update_lift/update_lift_widget.dart' show UpdateLiftWidget;
 export '/pages/signin/signin_widget.dart' show SigninWidget;
+export '/searchlift/searchlift_widget.dart' show SearchliftWidget;
+export '/home/home_widget.dart' show HomeWidget;

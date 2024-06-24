@@ -56,7 +56,7 @@ class _CreateLiftWidgetState extends State<CreateLiftWidget> {
         key: scaffoldKey,
         backgroundColor: FlutterFlowTheme.of(context).secondary,
         appBar: AppBar(
-          backgroundColor: const Color(0xFF5B3271),
+          backgroundColor: const Color(0xFF325971),
           automaticallyImplyLeading: false,
           leading: FlutterFlowIconButton(
             borderColor: Colors.transparent,

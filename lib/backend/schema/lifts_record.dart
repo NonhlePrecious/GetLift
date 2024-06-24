@@ -56,6 +56,11 @@ class LiftsRecord extends FirestoreRecord {
   int get cost => _cost ?? 0;
   bool hasCost() => _cost != null;
 
+  // "availlableSeats" field.
+  int? _availlableSeats;
+  int get availlableSeats => _availlableSeats ?? 0;
+  bool hasAvaillableSeats() => _availlableSeats != null;
+
   void _initializeFields() {
     _liftname = snapshotData['liftname'] as String?;
     _departureAddress = snapshotData['departureAddress'] as String?;
@@ -65,6 +70,7 @@ class LiftsRecord extends FirestoreRecord {
     _createdBy = snapshotData['created_by'] as DocumentReference?;
     _rideshareMembers = getDataList(snapshotData['rideshare_members']);
     _cost = castToType<int>(snapshotData['cost']);
+    _availlableSeats = castToType<int>(snapshotData['availlableSeats']);
   }
 
   static CollectionReference get collection =>
@@ -108,6 +114,7 @@ Map<String, dynamic> createLiftsRecordData({
   DateTime? time,
   DocumentReference? createdBy,
   int? cost,
+  int? availlableSeats,
 }) {
   final firestoreData = mapToFirestore(
     <String, dynamic>{
@@ -118,6 +125,7 @@ Map<String, dynamic> createLiftsRecordData({
       'time': time,
       'created_by': createdBy,
       'cost': cost,
+      'availlableSeats': availlableSeats,
     }.withoutNulls,
   );
 
@@ -137,7 +145,8 @@ class LiftsRecordDocumentEquality implements Equality<LiftsRecord> {
         e1?.time == e2?.time &&
         e1?.createdBy == e2?.createdBy &&
         listEquality.equals(e1?.rideshareMembers, e2?.rideshareMembers) &&
-        e1?.cost == e2?.cost;
+        e1?.cost == e2?.cost &&
+        e1?.availlableSeats == e2?.availlableSeats;
   }
 
   @override
@@ -149,7 +158,8 @@ class LiftsRecordDocumentEquality implements Equality<LiftsRecord> {
         e?.time,
         e?.createdBy,
         e?.rideshareMembers,
-        e?.cost
+        e?.cost,
+        e?.availlableSeats
       ]);
 
   @override
