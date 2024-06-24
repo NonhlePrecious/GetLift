@@ -21,6 +21,30 @@ Confirm or Cancel a Lift
 
 # Technologies Used
 
+UI Framework for the view:
+Flutter: The core UI framework for building natively compiled applications for mobile, web, and desktop from a single codebase.
+Styling and Themes:
+Flutter Material: Material design widgets and components.
+
+UI Libraries:
+Flutter Lottie: For rendering animations (welcome screen).
+
+Routing:
+Flutter Navigator: Built-in navigation system.
+
+For the Controller
+State Management:
+Provider: To notify the UI about changes in the model.
+
+Database:
+Firebase: Comprehensive suite of services including Firestore for database, Authentication, Cloud Functions, and more.
+
+Payment Processing:
+Stripe: For handling payments.
+
+Push Notifications:
+Firebase Cloud Messaging (FCM): For sending push notifications to the app.
+
 # Architecture
 
 MVC: The app follows the MVC (Model-View-Controller) ensuring separation of concerns and maintaining a clean and organized codebase. 
@@ -28,7 +52,7 @@ data: Contains data-related components following Clean Architecture principles:
 ui: User interface components:
 screens: RecyclerView adapters for displaying lifts in a listview
 viewmodels: ViewModels for managing UI-related data and logic.
-FIREBASE: used for user authentication and data storage
+FIREBASE: used for user cloud authentication and data storage
 
 ## Getting Started
  
