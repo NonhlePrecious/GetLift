@@ -461,6 +461,13 @@ class _LiftsWidgetState extends State<LiftsWidget> {
                                                           ParamType
                                                               .DocumentReference,
                                                         ),
+                                                        'searchDocRef':
+                                                            serializeParam(
+                                                          listViewLiftsRecord
+                                                              .reference,
+                                                          ParamType
+                                                              .DocumentReference,
+                                                        ),
                                                       }.withoutNulls,
                                                     );
                                                   },

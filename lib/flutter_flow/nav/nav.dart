@@ -116,6 +116,12 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               isList: false,
               collectionNamePath: ['lifts'],
             ),
+            searchDocRef: params.getParam(
+              'searchDocRef',
+              ParamType.DocumentReference,
+              isList: false,
+              collectionNamePath: ['lifts'],
+            ),
           ),
         ),
         FFRoute(

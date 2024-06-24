@@ -440,6 +440,13 @@ class _SearchliftWidgetState extends State<SearchliftWidget> {
                                                               ParamType
                                                                   .DocumentReference,
                                                             ),
+                                                            'searchDocRef':
+                                                                serializeParam(
+                                                              nosearchItem
+                                                                  .reference,
+                                                              ParamType
+                                                                  .DocumentReference,
+                                                            ),
                                                           }.withoutNulls,
                                                         );
                                                       },
@@ -752,6 +759,13 @@ class _SearchliftWidgetState extends State<SearchliftWidget> {
                                                       'update_lift',
                                                       queryParameters: {
                                                         'liftDocRef':
+                                                            serializeParam(
+                                                          nosearchItem
+                                                              .reference,
+                                                          ParamType
+                                                              .DocumentReference,
+                                                        ),
+                                                        'searchDocRef':
                                                             serializeParam(
                                                           nosearchItem
                                                               .reference,

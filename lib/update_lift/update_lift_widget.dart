@@ -13,9 +13,11 @@ class UpdateLiftWidget extends StatefulWidget {
   const UpdateLiftWidget({
     super.key,
     required this.liftDocRef,
+    required this.searchDocRef,
   });
 
   final DocumentReference? liftDocRef;
+  final DocumentReference? searchDocRef;
 
   @override
   State<UpdateLiftWidget> createState() => _UpdateLiftWidgetState();
